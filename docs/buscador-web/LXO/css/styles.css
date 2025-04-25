@@ -132,7 +132,7 @@ body.modal-open {
   z-index: 1100;
 }
 
-/* WhatsApp: diferente color */
+/* WhatsApp: botón principal */
 .whatsapp-sidebar-button {
   background-color: #25d366;
   color: white;
@@ -143,14 +143,15 @@ body.modal-open {
   width: 100%;
   margin-bottom: 10px;
   text-align: center;
-  transition: background-color 0.3s ease; /* Transición suave para el hover */
+  transition: background-color 0.3s ease;
 }
 
 /* Efecto hover - Verde más fuerte */
 .whatsapp-sidebar-button:hover {
-  background-color: #128c7e; /* Verde más fuerte */
+  background-color: #128c7e;
 }
 
+/* Contenedor general del modal */
 .whatsapp-modal {
   display: flex;
   flex-direction: column;
@@ -158,12 +159,14 @@ body.modal-open {
   padding: 10px 0;
 }
 
+/* Estilo para los inputs */
 .whatsapp-modal input {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
+/* Estilo para botones generales dentro del modal */
 .whatsapp-modal button {
   padding: 10px;
   background-color: #25d366;
@@ -172,10 +175,40 @@ body.modal-open {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease; /* Transición suave para el hover */
+  transition: background-color 0.3s ease;
 }
 
-/* Efecto hover - Verde más fuerte */
+/* Efecto hover en botones dentro del modal */
 .whatsapp-modal button:hover {
-  background-color: #128c7e; /* Verde más fuerte */
+  background-color: #128c7e;
+}
+
+/* ====== NUEVO: Botones numerados de selección ====== */
+#messageSelector {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+#messageSelector button {
+  background-color: #e0e0e0; /* Gris clarito para botones de selección */
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover para los botones numerados */
+#messageSelector button:hover {
+  background-color: #cccccc;
+}
+
+/* Botón numerado activo (opcional si quieres que el botón seleccionado resalte) */
+#messageSelector button.active {
+  background-color: #25d366;
+  color: white;
+  border-color: #128c7e;
 }
