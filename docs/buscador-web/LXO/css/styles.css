@@ -55,13 +55,14 @@ iframe {
   color: #34495e;
 }
 
+/* Unificar color de los botones */
 .toggle-button,
 .scroll-button,
 .scholarship-button,
 .certifications-button,
 .sales-button,
 .objections-button {
-  background-color: #3498db;
+  background-color: #3498db; /* Color común */
   color: white;
   border: none;
   padding: 10px;
@@ -83,7 +84,7 @@ body.modal-open {
 
 /* Estilos del modal */
 .modal {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -94,6 +95,7 @@ body.modal-open {
   justify-content: center;
   align-items: center;
 }
+
 .modal-content {
   background: white;
   padding: 20px;
@@ -103,10 +105,11 @@ body.modal-open {
   text-align: left;
   position: relative;
   max-height: 80vh;
-  overflow-y: auto; /* Permite desplazarse si hay mucho contenido */
+  overflow-y: auto;
 }
+
 .close {
-  position: fixed; /* Cambia de absolute a fixed */
+  position: fixed;
   top: 10px;
   right: 15px;
   font-size: 20px;
@@ -115,21 +118,10 @@ body.modal-open {
   padding: 5px 10px;
   border-radius: 50%;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  z-index: 1100; /* Asegura que esté por encima del modal */
+  z-index: 1100;
 }
 
-.objections-button {
-  margin: 10px;
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-/* Whatsaap */
-
+/* WhatsApp: diferente color */
 .whatsapp-sidebar-button {
   background-color: #25d366;
   color: white;
