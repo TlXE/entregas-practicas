@@ -18,3 +18,23 @@ const firebaseConfig = {
     }
   });
   
+  // Mostrar botón solo si está logueado
+firebase.auth().onAuthStateChanged((user) => {
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (user) {
+    logoutBtn.style.display = "inline-block";
+  } else {
+    logoutBtn.style.display = "none";
+  }
+});
+
+// Cerrar sesión
+document.getElementById("logoutBtn").addEventListener("click", function () {
+  firebase.auth().signOut().then(() => {
+    alert("Sesión cerrada correctamente.");
+    window.location.href = "/login.html"; // Cambia esto si usas otra ruta
+  }).catch((error) => {
+    console.error("Error al cerrar sesión:", error);
+    alert("Ocurrió un error al cerrar sesión.");
+  });
+});
