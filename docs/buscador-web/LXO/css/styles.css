@@ -127,3 +127,35 @@ body.modal-open {
     cursor: pointer;
     border-radius: 5px;
 }
+
+/* Whatsaap */
+
+.whatsapp-widget {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #25D366;
+    border-radius: 10px;
+    background-color: #f4fdf7;
+}
+  
+.whatsapp-widget input {
+    padding: 8px;
+    margin-right: 8px;
+    width: 200px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+  
+.whatsapp-widget button {
+    padding: 8px 16px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+  
+.whatsapp-widget button:hover {
+    background-color: #1DA851;
+}
+  
