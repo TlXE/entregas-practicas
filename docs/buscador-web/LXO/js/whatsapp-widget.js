@@ -1,4 +1,8 @@
-function loadWhatsAppWidget(pdfUrl, carreraNombre) {
+function loadWhatsAppWidget(pdfUrl) {
+  // Obtener título de la carrera desde el <h1>
+  const h1 = document.querySelector("h1");
+  const carreraNombre = h1 ? h1.textContent.replace(/^🏛️\s*/, "").trim() : "Carrera";
+
   const container = document.createElement("div");
   container.classList.add("whatsapp-widget");
   container.innerHTML = `
@@ -24,7 +28,6 @@ function sendWhatsApp(pdfUrl, carreraNombre) {
     return;
   }
 
-  // Extraer duración y modalidad directamente del HTML
   const duracionElement = [...document.querySelectorAll("li")]
     .find(el => el.textContent.includes("Duración"));
   const modalidadElement = [...document.querySelectorAll("li")]
@@ -36,18 +39,18 @@ function sendWhatsApp(pdfUrl, carreraNombre) {
   const message = encodeURIComponent(
     `Hola ${name}, soy el Lic. Axel Gutiérrez del Departamento de Becas y Admisiones de UVM.\n\n` +
     `Te comparto los detalles de la carrera "${carreraNombre}":\n\n` +
-    `📚 Modalidad y Duración:\n` +
+    `- Modalidad y Duración:\n` +
     `- Modalidad: ${modalidad}\n` +
     `- Duración: ${duracion}\n\n` +
-    `💻 Plataforma de Aprendizaje:\n` +
+    `- Plataforma de Aprendizaje:\n` +
     `Utilizarás la plataforma autodidacta Blackboard, accesible 24/7, para tus actividades de aprendizaje y evaluación.\n` +
     `Además, contarás con sesiones de aprendizaje en vivo los lunes, miércoles y viernes en 4 horarios vespertinos.\n` +
     `En caso de no poder conectarte, podrás ver las sesiones grabadas.\n` +
     `No contamos faltas ni control de tiempo de conexión.\n\n` +
-    `📄 Aquí está el plan de estudios: ${pdfUrl}`
+    `- Aquí está el plan de estudios: ${pdfUrl}`
   );
 
-  const url = `https://wa.me/52${phone}?text=${message}`;
+  const url = `https://web.whatsapp.com/send?phone=52${phone}&text=${message}`;
   window.open(url, '_blank');
 }
 
