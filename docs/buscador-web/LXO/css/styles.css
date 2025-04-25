@@ -71,6 +71,17 @@ iframe {
   width: 100%;
   margin-bottom: 10px;
   text-align: center;
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Efecto hover - Azul más fuerte */
+.toggle-button:hover,
+.scroll-button:hover,
+.scholarship-button:hover,
+.certifications-button:hover,
+.sales-button:hover,
+.objections-button:hover {
+  background-color: #2980b9; /* Azul más fuerte */
 }
 
 .certifications-image {
@@ -132,10 +143,12 @@ body.modal-open {
   width: 100%;
   margin-bottom: 10px;
   text-align: center;
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
 }
 
+/* Efecto hover - Verde más fuerte */
 .whatsapp-sidebar-button:hover {
-  background-color: #1da851;
+  background-color: #128c7e; /* Verde más fuerte */
 }
 
 .whatsapp-modal {
@@ -159,8 +172,10 @@ body.modal-open {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
 }
 
+/* Efecto hover - Verde más fuerte */
 .whatsapp-modal button:hover {
-  background-color: #1da851;
+  background-color: #128c7e; /* Verde más fuerte */
 }
