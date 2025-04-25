@@ -38,7 +38,6 @@ function sendWhatsApp(pdfUrl, carreraNombre) {
   const message = encodeURIComponent(
     `Hola ${name}, soy el Lic. Axel Gutiérrez del Departamento de Becas y Admisiones de UVM.\n\n` +
     `Te comparto los detalles de la carrera "${carreraNombre}":\n\n` +
-    `- Modalidad y Duración:\n` +
     `- Modalidad: 100% en línea.\n` +
     `- Duración: ${duracion}\n\n` +
     `- Plataforma de Aprendizaje:\n` +
