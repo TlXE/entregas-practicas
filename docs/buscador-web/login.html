@@ -6,7 +6,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
 
-  <!-- Estilos Glassmorphism limpio -->
+  <!-- Estilos Glassmorphism fondo claro -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
   <style>
@@ -16,7 +16,7 @@
       box-sizing: border-box;
     }
     body {
-      background-color: #080710; /* Color original elegante */
+      background-color: #f8f9fa; /* Fondo gris claro */
       font-family: 'Poppins', sans-serif;
       height: 100vh;
       display: flex;
@@ -24,11 +24,11 @@
       align-items: center;
     }
     form {
-      background-color: rgba(255, 255, 255, 0.13);
+      background-color: rgba(0, 0, 0, 0.05);
       backdrop-filter: blur(10px);
-      border: 2px solid rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(0, 0, 0, 0.1);
       border-radius: 10px;
-      box-shadow: 0 0 40px rgba(8,7,16,0.6);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
       padding: 50px 35px;
       width: 400px;
       text-align: center;
@@ -36,7 +36,7 @@
     form h2 {
       font-size: 32px;
       font-weight: 600;
-      color: #ffffff;
+      color: #333333; /* Texto oscuro */
       margin-bottom: 30px;
     }
     label {
@@ -45,30 +45,30 @@
       margin-top: 20px;
       font-size: 16px;
       font-weight: 500;
-      color: #ffffff;
+      color: #333333;
     }
     input {
       display: block;
       width: 100%;
       height: 50px;
       margin-top: 8px;
-      background-color: rgba(255, 255, 255, 0.07);
+      background-color: rgba(0, 0, 0, 0.05);
       border: none;
       border-radius: 5px;
       padding: 0 10px;
       font-size: 14px;
       font-weight: 300;
-      color: #ffffff;
+      color: #333333;
       outline: none;
     }
     ::placeholder {
-      color: #e5e5e5;
+      color: #999999;
     }
     button {
       margin-top: 30px;
       width: 100%;
-      background-color: #ffffff;
-      color: #080710;
+      background-color: #333333;
+      color: #ffffff;
       padding: 15px 0;
       font-size: 18px;
       font-weight: 700;
@@ -78,9 +78,7 @@
       transition: background-color 0.3s, color 0.3s;
     }
     button:hover {
-      background-color: #080710;
-      color: #ffffff;
-      border: 1px solid #ffffff;
+      background-color: #555555;
     }
   </style>
 </head>
@@ -120,4 +118,5 @@
   </script>
 </body>
 </html>
+
 
