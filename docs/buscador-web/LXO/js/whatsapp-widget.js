@@ -16,8 +16,8 @@ function loadWhatsAppWidget(pdfUrl, carreraNombre) {
     }
   
     const message = encodeURIComponent(`Hola, estoy interesado en la ${carreraNombre}. ¿Podrías compartirme más información? Aquí está el plan de estudios: ${pdfUrl}`);
-    const url = `https://wa.me/52${phone}?text=${message}`;
-  
+    const url = `https://web.whatsapp.com/send?phone=52${phone}&text=${message}`;
+
     window.open(url, '_blank');
   }
   
