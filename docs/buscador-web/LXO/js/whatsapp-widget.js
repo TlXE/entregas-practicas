@@ -15,7 +15,7 @@ function loadWhatsAppWidget(pdfUrl) {
 }
 
 function sendWhatsApp(pdfUrl, carreraNombre) {
-  const phone = document.getElementById('whatsappNumber').value.trim();
+  const phone = document.getElementById('whatsappNumber').value.replace(/\s+/g, '');
   const name = document.getElementById('prospectName').value.trim();
 
   if (!name) {
