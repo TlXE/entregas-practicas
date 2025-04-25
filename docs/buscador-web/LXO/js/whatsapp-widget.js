@@ -34,13 +34,12 @@ function sendWhatsApp(pdfUrl, carreraNombre) {
     .find(el => el.textContent.includes("Modalidad"));
 
   const duracion = duracionElement ? duracionElement.textContent.replace("Duración:", "").trim() : "No especificada";
-  const modalidad = modalidadElement ? modalidadElement.textContent.replace("Modalidad:", "").trim() : "No especificada";
 
   const message = encodeURIComponent(
     `Hola ${name}, soy el Lic. Axel Gutiérrez del Departamento de Becas y Admisiones de UVM.\n\n` +
     `Te comparto los detalles de la carrera "${carreraNombre}":\n\n` +
     `- Modalidad y Duración:\n` +
-    `- Modalidad: ${modalidad}\n` +
+    `- Modalidad: 100% en línea.\n` +
     `- Duración: ${duracion}\n\n` +
     `- Plataforma de Aprendizaje:\n` +
     `Utilizarás la plataforma autodidacta Blackboard, accesible 24/7, para tus actividades de aprendizaje y evaluación.\n` +
