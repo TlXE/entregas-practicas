@@ -4,28 +4,43 @@ function loadWhatsAppWidget(pdfUrl) {
 
   const container = document.createElement("div");
   container.classList.add("whatsapp-widget");
+
   container.innerHTML = `
-    <h3>📱 Solicita info por WhatsApp</h3>
-    <input type="text" id="prospectName" placeholder="Nombre del prospecto" />
-    <input type="tel" id="whatsappNumber" placeholder="Número WhatsApp (10 dígitos)" />
-    <div id="messageSelector">
-      <p>Selecciona el mensaje:</p>
-      <button onclick="setMessageType(1)">1</button>
-      <button onclick="setMessageType(2)">2</button>
-      <button onclick="setMessageType(3)">3</button>
-      <button onclick="setMessageType(4)">4</button>
-      <button onclick="setMessageType(5)">5</button>
+    <div class="whatsapp-modal">
+      <h3>📱 Enviar info por WhatsApp</h3>
+      <p>Completa los datos para enviar la información al prospecto vía WhatsApp:</p>
+      <input type="text" id="prospectName" placeholder="Nombre del prospecto" />
+      <input type="tel" id="whatsappNumber" placeholder="Número WhatsApp (10 dígitos)" />
+
+      <div id="messageSelector">
+        <p>Selecciona el mensaje:</p>
+        <button onclick="setMessageType(1)">1</button>
+        <button onclick="setMessageType(2)">2</button>
+        <button onclick="setMessageType(3)">3</button>
+        <button onclick="setMessageType(4)">4</button>
+        <button onclick="setMessageType(5)">5</button>
+      </div>
+
+      <button onclick="sendWhatsApp('${pdfUrl}', '${carreraNombre}')">Enviar por WhatsApp</button>
     </div>
-    <button onclick="sendWhatsApp('${pdfUrl}', '${carreraNombre}')">Enviar por WhatsApp</button>
   `;
+
   document.body.appendChild(container);
 
-  // Valor inicial del tipo de mensaje
   window.selectedMessageType = 1;
 }
 
 function setMessageType(type) {
   window.selectedMessageType = type;
+
+  const buttons = document.querySelectorAll('#messageSelector button');
+  buttons.forEach((btn, index) => {
+    if (index + 1 === type) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
 }
 
 function sendWhatsApp(pdfUrl, carreraNombre) {
