@@ -227,6 +227,22 @@ function openModal(section) {
         `;
     }
 
+    else if (section === "whatsapp") {
+        const h1 = document.querySelector("h1");
+        const carreraNombre = h1 ? h1.textContent.replace(/^🏛️\s*/, "").trim() : "Carrera";
+        const pdfUrl = document.querySelector("#pdfViewer")?.src || "https://tusitio.com/pdf/default.pdf";
+    
+        title = "📱 Enviar info por WhatsApp";
+        content = `
+            <div class="whatsapp-modal">
+                <p>Completa los datos para enviar la información al prospecto vía WhatsApp:</p>
+                <input type="text" id="prospectName" placeholder="Nombre del prospecto" />
+                <input type="tel" id="whatsappNumber" placeholder="Número WhatsApp (10 dígitos)" />
+                <button onclick="sendWhatsApp('${pdfUrl}', '${carreraNombre}')">Enviar por WhatsApp</button>
+            </div>
+        `;
+    }    
+
     document.getElementById("modalTitle").innerText = title;
     document.getElementById("modalBody").innerHTML = content;
     document.getElementById("infoModal").style.display = "flex";
