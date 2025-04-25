@@ -14,7 +14,7 @@ const firebaseConfig = {
   
   firebase.auth().onAuthStateChanged((user) => {
     if (!user) {
-      window.location.href = "login.html";
+      window.location.href = "/entregas-practicas/buscador-web/login.html";
     }
   });
   
