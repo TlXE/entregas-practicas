@@ -260,7 +260,7 @@ function openModal(section) {
         title = "🟥 Cuadro Rojo";
     
         // Cargar el contenido externo
-        fetch('cuadro-rojo.html')
+        fetch('/entregas-practicas/buscador-web/cuadro-rojo.html')
           .then(response => response.text())
           .then(html => {
               document.getElementById("modalTitle").innerText = title;
