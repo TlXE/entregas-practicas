@@ -259,30 +259,21 @@ function openModal(section) {
     else if (section === "cuadro-rojo") {
         title = "🟥 Cuadro Rojo";
     
-        // Primero pon un loader básico mientras carga
-        document.getElementById("modalTitle").innerText = title;
-        document.getElementById("modalBody").innerHTML = '<p style="text-align:center;">⏳ Cargando formulario...</p>';
-        document.getElementById("infoModal").style.display = "flex";
-        document.body.classList.add("modal-open");
-    
-        // Luego cargas el contenido real
-        fetch('/entregas-practicas/buscador-web/cuadro-rojo.html')
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Error al cargar el formulario');
-            }
-            return response.text();
-          })
+        // Cargar el contenido externo
+        fetch('https://tlxe.github.io/entregas-practicas/buscador-web/cuadro-rojo.html')
+          .then(response => response.text())
           .then(html => {
+              document.getElementById("modalTitle").innerText = title;
               document.getElementById("modalBody").innerHTML = html;
+              document.getElementById("infoModal").style.display = "flex";
+              document.body.classList.add("modal-open");
           })
           .catch(error => {
-              document.getElementById("modalBody").innerHTML = '<p style="color:red; text-align:center;">❌ Error cargando formulario. Intenta más tarde.</p>';
               console.error('Error cargando cuadro-rojo.html:', error);
           });
-    
-        return;
-    }    
+        
+        return; // Para evitar que el resto de openModal siga
+    }
     
     document.getElementById("modalTitle").innerText = title;
     document.getElementById("modalBody").innerHTML = content;
