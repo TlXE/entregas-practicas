@@ -1,178 +1,169 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Cuadro Rojo</title>
-  <link rel="stylesheet" href="/entregas-practicas/buscador-web/css/cuadro.css">
-</head>
-<body style="font-family: Arial, sans-serif; background-color: #f5f5f5; text-align: center; padding: 20px;">
-
-  <h2>🟥 Cuadro Rojo</h2>
-  <button onclick="abrirCuadroRojo()" style="padding:10px 20px; font-size:16px;">Iniciar</button>
-
-  <div id="cuadroRojoModal" style="margin-top: 20px;">
-    <h3>Formulario de Transferencia</h3>
-    <table border="1" style="margin: 0 auto; border-collapse: collapse; width: 90%;">
-      <thead>
-        <tr style="background-color: darkred; color: white;">
-          <th>FECHA</th><th>CE</th><th>NO. PERSONA</th><th>NOMBRE</th><th>TELÉFONO</th><th>CORREO</th>
-          <th>LÍNEA DE INTERÉS</th><th>CARRERA</th><th>PROMEDIO</th><th>FUENTE</th><th>CICLO</th>
-          <th>ASESOR A QUE SE TRANSFIERE</th><th>HORA</th><th>LIGA</th><th>ESTATUS</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input id="crFecha" readonly></td>
-          <td>
-            <select id="crCE">
-              <option>AXEL URIEL GUTIÉRREZ MAYA</option>
-              <option>OTRO ASESOR</option>
-            </select>
-          </td>
-          <td><input id="crNumPersona"></td>
-          <td><input id="crNombre"></td>
-          <td><input id="crTelefono"></td>
-          <td><input id="crCorreo"></td>
-          <td>
-            <input id="crLinea" list="lineasSugeridas" placeholder="Escribe o selecciona">
-            <datalist id="lineasSugeridas">
-              <option value="HSO">
-              <option value="LXO">
-              <option value="PGO">
-            </datalist>
-          </td>
-          <td><input id="crCarrera" readonly></td>
-          <td><input id="crPromedio" type="number" step="0.1"></td>
-          <td>
-            <input id="crFuente" list="fuentesSugeridas" placeholder="Escribe o selecciona">
-            <datalist id="fuentesSugeridas">
-              <option value="WEB">
-              <option value="CHAT">
-              <option value="INBOUND">
-              <option value="WHATSAPP">
-              <option value="CALIXTA">
-              <option value="ASIGNACION DE DOCUMENTOS">
-              <option value="EQ">
-              <option value="ABSORCION">
-              <option value="EX ALUMNO">
-              <option value="EXTERNO">
-              <option value="REFERIDO">
-            </datalist>
-          </td>
-          <td><input id="crCiclo"></td>
-          <td>
-            <input id="crAsesorDestino" list="asesoresSugeridos" placeholder="Asesor">
-            <datalist id="asesoresSugeridos">
-              <option value="ABDIEL MARTINEZ GOCHES">
-              <option value="ADRIANA CECILIA CASTILLO GOMEZ">
-              <option value="ADRIANA SANCHEZ OJEDA">
-              <option value="ALAIDE PEZA MUNGUIA">
-              <option value="ALAN FELIPE ELIZALDE CHAMORRO">
-              <option value="ALEJANDRA MENDOZA RIOS">
-              <option value="ALMA BEATRIZ ZARATE PAVON">
-              <option value="ALMA DELIA MARTINEZ ELIZALDE">
-              <option value="ALONSO RICARDO ARTEAGA AGUIRRE">
-              <option value="ALTER ASHLEY JIMENEZ HERNANDEZ">
-              <option value="ANA KAREN PAREDES ROSAS">
-              <option value="ANAHI ISIDRO REYES">
-              <option value="ANDREA CAROLINA CAMACHO GUTIERREZ">
-              <option value="ANGEL MANUEL COLIN GONZALEZ">
-              <option value="ARIEL BENJAMIN GOMEZ REYERO">
-              <option value="ATZIRI TONANTZIN JIMENEZ GARCIA">
-              <option value="BETHSABEE JIMENEZ GARCIA">
-              <option value="BRENDA PAULINA SALDIVAR GARCIA">
-              <option value="BRENDA SARAHI ARIAS GARCIA">
-              <option value="BRUNO GARCIA PEREZ">
-              <option value="CARLOS ACEVEDO INFANTE">
-              <option value="CARLOS ALBERTO ROMERO RIVERA">
-              <option value="CARLOS ENRIQUE MARTINEZ CHAVEZ">
-              <option value="CINTIA DIAZ GONZALEZ">
-              <option value="DANIEL CRUZ MORIN">
-              <option value="DANIELA MICHELLE VAZQUEZ NUÑEZ">
-              <option value="DAPHNE ABIGAIL GALAN RUESGAS">
-              <option value="DAVID ELIU DIAZ MORALES">
-              <option value="DAVID SALVADOR DOMINGUEZ RIVERO">
-              <option value="DENNYS SANTIAGO PEREZ">
-              <option value="DIEGO EDUARDO ALONSO RANGEL">
-              <option value="EDDY ARTURO HERNANDEZ ALEJO">
-              <option value="EDGAR OSWALDO RAYA AMAYA">
-              <option value="EDUARDO ROMERO LANDEROS">
-              <option value="EINAR YAEL GARCIA MALDONADO">
-              <option value="ELIZABETH NAVARRETE LOBERA">
-              <option value="EMMANUEL OSWALDO BARAJAS ALVAREZ">
-              <option value="EVANGELINA HERNANDEZ FARFAN">
-              <option value="FEDERICO GARCIA CHAVARRIA">
-              <option value="FERNANDA GUADALUPE GARCIA ARANO">
-              <option value="FLOR ANGELICA HERNANDEZ RAMIREZ">
-              <option value="GABRIELA DELGADO ROA">
-              <option value="GABRIELA MARISOL ALVARADO CHAVEZ">
-              <option value="GEOVANNI AUGUSTO RIVERA PAZ">
-              <option value="HECTOR GERARDO AGUILAR TINOCO">
-              <option value="ISABEL ORTIZ MORALES">
-              <option value="IVAN ROBERTO ROSALES ENSASTIGA">
-              <option value="JAZMIN MAGALY PEREZ VILLAREAL">
-              <option value="JENI ROSAS SANTIAGO">
-              <option value="JESUS MORENO DESIDERIO">
-              <option value="JOSE LUIS CASTILLO MARTINEZ">
-              <option value="JOSE MARTIN RAMIREZ VELAZQUEZ">
-              <option value="JOSELYN MICHELL AMADOR FRANCO">
-              <option value="JORGE LUIS CATARINO BAUTISTA">
-              <option value="JONATHAN DANIEL ZUART VALDES">
-              <option value="JUAN ALBERTO MOCTEZUMA PLAZA">
-              <option value="JUAN ALONSO LOPEZ MONTERREY">
-              <option value="JUAN CARLOS VELAZQUEZ GONZALEZ">
-              <option value="JULISSA ALCANTAR ZEPEDA">
-              <option value="KATERINE JORDAN GUERRERO">
-              <option value="LAURA ITZEL MARTINEZ ESPITIA">
-              <option value="LESLIE MARIANA MORALES CONTRERAS">
-              <option value="LILIA AVELINA MARTINEZ ROBLES">
-              <option value="LILIANA SALAS PEREZ">
-              <option value="LIZBETH GUADALUPE RODRIGUEZ LOBATO">
-              <option value="LUCIANA JANETT TORRES ESPINOSA">
-              <option value="LUIS CARLOS SEGURA LOPEZ">
-              <option value="MARANLI AMERICA ROJAS ROSAS">
-              <option value="MARCO ANTONIO HUITRON HERNANDEZ">
-              <option value="MARIA FERNANDA GLORIA HERNANDEZ">
-              <option value="MARIA FERNANDA LOPEZ CAPULA">
-              <option value="MARIA GUADALUPE URBAN JUAREZ">
-              <option value="MARTIN SALVADOR HERNANDEZ MALDONADO">
-              <option value="MIRIAM LOPEZ PEREZ">
-              <option value="MONICA GISEL AVILA CASTRO">
-              <option value="MYRNA CARMINA GALVAN COLUNGA">
-              <option value="NADEZHDA CORREA MUÑOZ">
-              <option value="NORMA STEPHANY MOLINA SAN JUAN">
-              <option value="OMAR SANTIAGO ROMERO CALLE">
-              <option value="OSWALDO CAMPOS ZIRES">
-              <option value="PERLA ESMERALDA MORA JIMENEZ">
-              <option value="ROCIO BELENDEZ ANGUIANO">
-              <option value="RODRIGO ALEXANDER LEONARDI SANCHEZ">
-              <option value="RUBEN RIVERA ARROYO">
-              <option value="SAMANTHA HERRERA HERNANDEZ">
-              <option value="SAUL FONSECA LOPEZ">
-              <option value="SEBASTIAN AVILA CASTRO">
-              <option value="STEPHANY JACQUELINE PRISCILIANO GARRIDO">
-              <option value="SUSANA LOPEZ AYALA">
-              <option value="TABATA FERNANDA BARRIOS ZUÑIGA">
-              <option value="VALERIA GONZALEZ BATES">
-              <option value="VALEXKA NICOL GUZMAN VAZQUEZ">
-              <option value="VERONICA ITZEL APARICIO MONTES">
-              <option value="VICTOR GERARDO GOMEZ GARCIA">
-              <option value="YURITZI ROSENDA QUEZADA PAVON">
-            </datalist>
-          </td>
-          <td><input id="crHora" readonly></td>
-          <td><input id="crLiga" placeholder="Pega aquí la liga completa"></td>
-          <td><input id="crEstatus"></td>
-        </tr>
-      </tbody>
-    </table>
-    <br>
-    <button style="background-color: red; color:white; padding:10px 20px; font-size:16px;" onclick="enviarCuadroRojo()">📧 Copiar y abrir Outlook</button>
-    
-    <h3 style="margin-top: 40px;">Vista previa del mensaje</h3>
-    <div id="vistaPrevia" style="margin: 20px auto; width: 95%; border: 1px solid #ccc; padding: 10px; background: #fff; text-align:center;"></div>  
-
+<div class="cuadro-rojo-content">
+    <h2>🟥 Cuadro Rojo</h2>
+    <button onclick="abrirCuadroRojo()" style="padding:10px 20px; font-size:16px;">Iniciar</button>
+  
+    <div id="cuadroRojoModal" style="margin-top: 20px;">
+      <h3>Formulario de Transferencia</h3>
+      <table border="1" style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr style="background-color: darkred; color: white;">
+            <th>FECHA</th><th>CE</th><th>NO. PERSONA</th><th>NOMBRE</th><th>TELÉFONO</th><th>CORREO</th>
+            <th>LÍNEA DE INTERÉS</th><th>CARRERA</th><th>PROMEDIO</th><th>FUENTE</th><th>CICLO</th>
+            <th>ASESOR A QUE SE TRANSFIERE</th><th>HORA</th><th>LIGA</th><th>ESTATUS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input id="crFecha" readonly></td>
+            <td>
+              <select id="crCE">
+                <option>AXEL URIEL GUTIÉRREZ MAYA</option>
+                <option>OTRO ASESOR</option>
+              </select>
+            </td>
+            <td><input id="crNumPersona"></td>
+            <td><input id="crNombre"></td>
+            <td><input id="crTelefono"></td>
+            <td><input id="crCorreo"></td>
+            <td>
+              <input id="crLinea" list="lineasSugeridas" placeholder="Escribe o selecciona">
+              <datalist id="lineasSugeridas">
+                <option value="HSO">
+                <option value="LXO">
+                <option value="PGO">
+              </datalist>
+            </td>
+            <td><input id="crCarrera" readonly></td>
+            <td><input id="crPromedio" type="number" step="0.1"></td>
+            <td>
+              <input id="crFuente" list="fuentesSugeridas" placeholder="Escribe o selecciona">
+              <datalist id="fuentesSugeridas">
+                <option value="WEB">
+                <option value="CHAT">
+                <option value="INBOUND">
+                <option value="WHATSAPP">
+                <option value="CALIXTA">
+                <option value="ASIGNACION DE DOCUMENTOS">
+                <option value="EQ">
+                <option value="ABSORCION">
+                <option value="EX ALUMNO">
+                <option value="EXTERNO">
+                <option value="REFERIDO">
+              </datalist>
+            </td>
+            <td><input id="crCiclo"></td>
+            <td>
+              <input id="crAsesorDestino" list="asesoresSugeridos" placeholder="Asesor">
+              <datalist id="asesoresSugeridos">
+                <option value="ABDIEL MARTINEZ GOCHES">
+                <option value="ADRIANA CECILIA CASTILLO GOMEZ">
+                <option value="ADRIANA SANCHEZ OJEDA">
+                <option value="ALAIDE PEZA MUNGUIA">
+                <option value="ALAN FELIPE ELIZALDE CHAMORRO">
+                <option value="ALEJANDRA MENDOZA RIOS">
+                <option value="ALMA BEATRIZ ZARATE PAVON">
+                <option value="ALMA DELIA MARTINEZ ELIZALDE">
+                <option value="ALONSO RICARDO ARTEAGA AGUIRRE">
+                <option value="ALTER ASHLEY JIMENEZ HERNANDEZ">
+                <option value="ANA KAREN PAREDES ROSAS">
+                <option value="ANAHI ISIDRO REYES">
+                <option value="ANDREA CAROLINA CAMACHO GUTIERREZ">
+                <option value="ANGEL MANUEL COLIN GONZALEZ">
+                <option value="ARIEL BENJAMIN GOMEZ REYERO">
+                <option value="ATZIRI TONANTZIN JIMENEZ GARCIA">
+                <option value="BETHSABEE JIMENEZ GARCIA">
+                <option value="BRENDA PAULINA SALDIVAR GARCIA">
+                <option value="BRENDA SARAHI ARIAS GARCIA">
+                <option value="BRUNO GARCIA PEREZ">
+                <option value="CARLOS ACEVEDO INFANTE">
+                <option value="CARLOS ALBERTO ROMERO RIVERA">
+                <option value="CARLOS ENRIQUE MARTINEZ CHAVEZ">
+                <option value="CINTIA DIAZ GONZALEZ">
+                <option value="DANIEL CRUZ MORIN">
+                <option value="DANIELA MICHELLE VAZQUEZ NUÑEZ">
+                <option value="DAPHNE ABIGAIL GALAN RUESGAS">
+                <option value="DAVID ELIU DIAZ MORALES">
+                <option value="DAVID SALVADOR DOMINGUEZ RIVERO">
+                <option value="DENNYS SANTIAGO PEREZ">
+                <option value="DIEGO EDUARDO ALONSO RANGEL">
+                <option value="EDDY ARTURO HERNANDEZ ALEJO">
+                <option value="EDGAR OSWALDO RAYA AMAYA">
+                <option value="EDUARDO ROMERO LANDEROS">
+                <option value="EINAR YAEL GARCIA MALDONADO">
+                <option value="ELIZABETH NAVARRETE LOBERA">
+                <option value="EMMANUEL OSWALDO BARAJAS ALVAREZ">
+                <option value="EVANGELINA HERNANDEZ FARFAN">
+                <option value="FEDERICO GARCIA CHAVARRIA">
+                <option value="FERNANDA GUADALUPE GARCIA ARANO">
+                <option value="FLOR ANGELICA HERNANDEZ RAMIREZ">
+                <option value="GABRIELA DELGADO ROA">
+                <option value="GABRIELA MARISOL ALVARADO CHAVEZ">
+                <option value="GEOVANNI AUGUSTO RIVERA PAZ">
+                <option value="HECTOR GERARDO AGUILAR TINOCO">
+                <option value="ISABEL ORTIZ MORALES">
+                <option value="IVAN ROBERTO ROSALES ENSASTIGA">
+                <option value="JAZMIN MAGALY PEREZ VILLAREAL">
+                <option value="JENI ROSAS SANTIAGO">
+                <option value="JESUS MORENO DESIDERIO">
+                <option value="JOSE LUIS CASTILLO MARTINEZ">
+                <option value="JOSE MARTIN RAMIREZ VELAZQUEZ">
+                <option value="JOSELYN MICHELL AMADOR FRANCO">
+                <option value="JORGE LUIS CATARINO BAUTISTA">
+                <option value="JONATHAN DANIEL ZUART VALDES">
+                <option value="JUAN ALBERTO MOCTEZUMA PLAZA">
+                <option value="JUAN ALONSO LOPEZ MONTERREY">
+                <option value="JUAN CARLOS VELAZQUEZ GONZALEZ">
+                <option value="JULISSA ALCANTAR ZEPEDA">
+                <option value="KATERINE JORDAN GUERRERO">
+                <option value="LAURA ITZEL MARTINEZ ESPITIA">
+                <option value="LESLIE MARIANA MORALES CONTRERAS">
+                <option value="LILIA AVELINA MARTINEZ ROBLES">
+                <option value="LILIANA SALAS PEREZ">
+                <option value="LIZBETH GUADALUPE RODRIGUEZ LOBATO">
+                <option value="LUCIANA JANETT TORRES ESPINOSA">
+                <option value="LUIS CARLOS SEGURA LOPEZ">
+                <option value="MARANLI AMERICA ROJAS ROSAS">
+                <option value="MARCO ANTONIO HUITRON HERNANDEZ">
+                <option value="MARIA FERNANDA GLORIA HERNANDEZ">
+                <option value="MARIA FERNANDA LOPEZ CAPULA">
+                <option value="MARIA GUADALUPE URBAN JUAREZ">
+                <option value="MARTIN SALVADOR HERNANDEZ MALDONADO">
+                <option value="MIRIAM LOPEZ PEREZ">
+                <option value="MONICA GISEL AVILA CASTRO">
+                <option value="MYRNA CARMINA GALVAN COLUNGA">
+                <option value="NADEZHDA CORREA MUÑOZ">
+                <option value="NORMA STEPHANY MOLINA SAN JUAN">
+                <option value="OMAR SANTIAGO ROMERO CALLE">
+                <option value="OSWALDO CAMPOS ZIRES">
+                <option value="PERLA ESMERALDA MORA JIMENEZ">
+                <option value="ROCIO BELENDEZ ANGUIANO">
+                <option value="RODRIGO ALEXANDER LEONARDI SANCHEZ">
+                <option value="RUBEN RIVERA ARROYO">
+                <option value="SAMANTHA HERRERA HERNANDEZ">
+                <option value="SAUL FONSECA LOPEZ">
+                <option value="SEBASTIAN AVILA CASTRO">
+                <option value="STEPHANY JACQUELINE PRISCILIANO GARRIDO">
+                <option value="SUSANA LOPEZ AYALA">
+                <option value="TABATA FERNANDA BARRIOS ZUÑIGA">
+                <option value="VALERIA GONZALEZ BATES">
+                <option value="VALEXKA NICOL GUZMAN VAZQUEZ">
+                <option value="VERONICA ITZEL APARICIO MONTES">
+                <option value="VICTOR GERARDO GOMEZ GARCIA">
+                <option value="YURITZI ROSENDA QUEZADA PAVON">
+              </datalist>
+            </td>
+            <td><input id="crHora" readonly></td>
+            <td><input id="crLiga" placeholder="Pega aquí la liga completa"></td>
+            <td><input id="crEstatus"></td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <br>
+  
+      <button style="background-color: red; color:white; padding:10px 20px; font-size:16px;" onclick="enviarCuadroRojo()">📧 Copiar y abrir Outlook</button>
+  
+      <h3 style="margin-top: 40px;">Vista previa del mensaje</h3>
+      <div id="vistaPrevia" style="border: 1px solid #ccc; padding: 10px; background: #fff; margin: 0 auto; width: 95%;"></div>
     </div>
-  <script src="/entregas-practicas/buscador-web/js/cuadro.js"></script>
-</body>
-</html>
+  </div>  
