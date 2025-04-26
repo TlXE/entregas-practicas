@@ -256,6 +256,25 @@ function openModal(section) {
         window.selectedMessageType = 1;
     }      
 
+    else if (section === "cuadro-rojo") {
+        title = "🟥 Cuadro Rojo";
+    
+        // Cargar el contenido externo
+        fetch('cuadro-rojo.html')
+          .then(response => response.text())
+          .then(html => {
+              document.getElementById("modalTitle").innerText = title;
+              document.getElementById("modalBody").innerHTML = html;
+              document.getElementById("infoModal").style.display = "flex";
+              document.body.classList.add("modal-open");
+          })
+          .catch(error => {
+              console.error('Error cargando cuadro-rojo.html:', error);
+          });
+        
+        return; // Para evitar que el resto de openModal siga
+    }
+    
     document.getElementById("modalTitle").innerText = title;
     document.getElementById("modalBody").innerHTML = content;
     document.getElementById("infoModal").style.display = "flex";
