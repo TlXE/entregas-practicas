@@ -257,8 +257,7 @@ function openModal(section) {
     }      
 
     else if (section === "cuadro-rojo") {
-        title = "🟥 Cuadro Rojo";
-    
+
         // Cargar el contenido externo
         fetch('https://tlxe.github.io/entregas-practicas/buscador-web/cuadro-rojo.html')
           .then(response => response.text())
