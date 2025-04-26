@@ -5,7 +5,6 @@ function abrirCuadroRojo() {
   
     document.getElementById("crFecha").value = fecha;
     document.getElementById("crHora").value = hora;
-    document.getElementById("crCarrera").value = carreraSimulada;
     document.getElementById("cuadroRojoModal").style.display = "block";
   
     // Activar actualización en tiempo real
