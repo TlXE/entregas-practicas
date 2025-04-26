@@ -1,48 +1,129 @@
 body {
-    font-family: Arial, sans-serif;
-    padding: 30px;
-    background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background: #f4f4f4;
+}
+
+button {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#cuadroRojoModal {
+  display: none;
+  background: #eafaf1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  min-width: 900px;
+}
+
+th {
+  background-color: red;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+td {
+  background-color: #eafaf1;
+  padding: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+input, select {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* Vista previa del mensaje con scroll interno */
+#vistaPrevia {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background: #fff;
+  text-align: left;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+#vistaPrevia > div {
+  min-width: 900px;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
   }
-  
+
   button {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  #cuadroRojoModal {
-    display: none;
-    background: #eafaf1;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    margin-top: 20px;
-  }
-  
-  table {
     width: 100%;
-    border-collapse: collapse;
     margin-top: 10px;
   }
-  
-  th {
-    background-color: red;
-    color: white;
-    padding: 8px;
+
+  #cuadroRojoModal {
+    padding: 10px;
   }
-  
-  td {
-    background-color: #eafaf1;
+
+  table {
+    min-width: 700px;
+  }
+
+  th, td {
+    font-size: 12px;
     padding: 5px;
   }
-  
-  input, select {
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
+
+  #vistaPrevia {
+    padding: 15px;
+    font-size: 14px;
   }
+}
+
+/* RESPONSIVE CELULAR */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  th, td {
+    font-size: 11px;
+    padding: 4px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #vistaPrevia {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
   
