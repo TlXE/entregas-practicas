@@ -80,12 +80,7 @@ function sendWhatsApp(pdfUrl, carreraNombre) {
         `- Aquí está el plan de estudios: ${pdfUrl}`;
       break;
     case 2:
-      message = `¡Hola ${name}! Soy Axel Gutiérrez de UVM.\n\n` +
-        `Gracias por tu interés en la carrera "${carreraNombre}".\n` +
-        `📚 Duración: ${duracion}\n` +
-        `🖥️ Modalidad: 100% Online con clases grabadas y en vivo.\n\n` +
-        `Plan de estudios aquí: ${pdfUrl}\n\n` +
-        `Te comparto los detalles de beneficios académicos al estudiar UVM 🎓\n\n` +
+      message = `Te comparto los detalles de beneficios académicos al estudiar UVM 🎓\n\n` +
         `Prestigio académico\n` +
         `Somos la 2da mejor institución académica en todo el país, contamos con 60 años de experiencia que respaldarán tu preparación educativa y profesional, por lo cual tendrás mejores oportunidades laborales.\n\n` +
         `Modalidad y tiempo\n` +
@@ -117,27 +112,13 @@ function sendWhatsApp(pdfUrl, carreraNombre) {
       break;
 
     case 3:
-      message = `Saludos ${name}, te escribe Axel Gutiérrez.\n\n` +
-        `Te comparto información de "${carreraNombre}".\n` +
-        `Duración: ${duracion}\nModalidad: En línea.\n\n` +
-        `📄 Plan de estudios: ${pdfUrl}\n\n` +
-        `¿Qué te parece, es el programa que estas buscando?`;
+      message = `¿Qué te parece, es el programa que estas buscando?`;
       break;
     case 4:
-      message = `Hola ${name} 👋, Axel Gutiérrez de Admisiones UVM.\n\n` +
-        `Detalles rápidos de "${carreraNombre}":\n` +
-        `🕒 Duración: ${duracion}\n` +
-        `📚 Modalidad: 100% en línea.\n\n` +
-        `Plan de materias: ${pdfUrl}\n\n` +
-        `¿Cuándo te gustaría iniciar?`;
+      message = `¿Cuándo te gustaría iniciar?`;
       break;
     case 5:
-      message = `¡Buenas tardes ${name}! Soy Axel Gutiérrez de la Universidad UVM.\n\n` +
-        `Sobre la carrera "${carreraNombre}":\n` +
-        `✔️ Modalidad 100% en línea\n` +
-        `✔️ Duración estimada: ${duracion}\n\n` +
-        `Plan de estudios aquí ➡️ ${pdfUrl}\n\n` +
-        `¿Te puedo apoyar en tu proceso de inscripción?`;
+      message =`¿Te puedo apoyar en tu proceso de inscripción?`;
       break;
     default:
       message = "Hola, te compartimos información de la carrera.";
