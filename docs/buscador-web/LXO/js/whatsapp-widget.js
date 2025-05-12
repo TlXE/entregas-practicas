@@ -80,35 +80,45 @@ function sendWhatsApp(pdfUrl, carreraNombre) {
         `- Aquí está el plan de estudios: ${pdfUrl}`;
       break;
     case 2:
-      message = `¡Hola ${name}! Soy Axel Gutiérrez de UVM.\n\n` +
-        `Gracias por tu interés en la carrera "${carreraNombre}".\n` +
-        `📚 Duración: ${duracion}\n` +
-        `🖥️ Modalidad: 100% Online con clases grabadas y en vivo.\n\n` +
-        `Plan de estudios aquí: ${pdfUrl}\n\n` +
+      message = `Te comparto los detalles de beneficios académicos al estudiar UVM 🎓\n\n` +
+        `Prestigio académico\n` +
+        `Somos la 2da mejor institución académica en todo el país, contamos con 60 años de experiencia que respaldarán tu preparación educativa y profesional, por lo cual tendrás mejores oportunidades laborales.\n\n` +
+        `Modalidad y tiempo\n` +
+        `Contamos con una modalidad 100% en línea que te permitirá estudiar, trabajar y dedicar tiempo a tu vida personal 🕒.\n\n` +
+        `Plataforma de vanguardia\n` +
+        `Contarás con una plataforma autodidacta con reconocimiento internacional que te facilitará todas tus actividades de estudio y te permitirá el acceso 24/7 desde cualquier dispositivo con acceso a internet 💻.\n\n` +
+        `Plan de estudios\n` +
+        `Contarás con un plan de estudios enfocado a tu preparación profesional, en cual se incluyen certificaciones estratégicas emitidas por Coursera, estas darán un plus a tu perfil profesional ya que tienen validez nacional e internacional 🌍.\n\n` +
+        `Gym Académico\n` +
+        `Tomarás talleres de habilidades digitales que te permitirán adaptar tus conocimientos en el ámbito educativo y profesional.\n\n` +
+        `Cursos UVM GO\n` +
+        `Cada inicio de cuatrimestre se te otorgará un curso certificado de manera adicional, este puede ser sobre un área laboral distinta a la que estudias, y cuenta con validez curricular 📘.\n\n` +
+        `Bolsa de trabajo\n` +
+        `En caso de requerirlo, UVM cuenta con convenios nacionales e internacionales para que puedas desarrollarte de manera profesional 💼.\n\n` +
+        `Acompañamiento académico\n` +
+        `Tus docentes y coordinadores de carrera te acompañan en todo momento para aclarar dudas ya sea por medio de mensaje, correo o sesiones en vivo ✉️.\n\n` +
+        `Materiales bibliográficos\n` +
+        `Cuentas con acceso a nuestra biblioteca digital sin costo, por lo cual no deberás invertir en materiales adicionales 📚.\n\n` +
+        `Titulación 0\n` +
+        `Para tu trámite no deberás presentar tesis, tesina o seminario de titulación. Solo deberás cumplir con 3 requisitos:\n\n` +
+        `- 100% de tus materias\n` +
+        `- Servicio social\n` +
+        `- Presentar examen profesional ✅\n\n` +
+        `Doble Titulación\n` +
+        `Si hablas el idioma inglés de manera avanzada, podrás solicitar las materias especializadas de National Louis University para especializar tu carrera y contar con una doble titulación 🎓.\n\n` +
+        `Certificación de estudios en EE.UU\n` +
+        `Contarás con la certificación de Equivalencia por IEE (International Education Evaluations), organización adscrita a NACES, asegurando la validez y aceptación de tus credenciales académicas para fines laborales, migratorios o académicos 🌐.\n\n` +
         `Estoy a tus órdenes para resolver cualquier duda.`;
       break;
+
     case 3:
-      message = `Saludos ${name}, te escribe Axel Gutiérrez.\n\n` +
-        `Te comparto información de "${carreraNombre}".\n` +
-        `Duración: ${duracion}\nModalidad: En línea.\n\n` +
-        `📄 Plan de estudios: ${pdfUrl}\n\n` +
-        `¿Te gustaría que agendáramos una llamada?`;
+      message = `¿Qué te parece, es el programa que estas buscando?`;
       break;
     case 4:
-      message = `Hola ${name} 👋, Axel Gutiérrez de Admisiones UVM.\n\n` +
-        `Detalles rápidos de "${carreraNombre}":\n` +
-        `🕒 Duración: ${duracion}\n` +
-        `📚 Modalidad: 100% en línea.\n\n` +
-        `Plan de materias: ${pdfUrl}\n\n` +
-        `¿Cuándo te gustaría iniciar?`;
+      message = `¿Cuándo te gustaría iniciar?`;
       break;
     case 5:
-      message = `¡Buenas tardes ${name}! Soy Axel Gutiérrez de la Universidad UVM.\n\n` +
-        `Sobre la carrera "${carreraNombre}":\n` +
-        `✔️ Modalidad 100% en línea\n` +
-        `✔️ Duración estimada: ${duracion}\n\n` +
-        `Plan de estudios aquí ➡️ ${pdfUrl}\n\n` +
-        `¿Te puedo apoyar en tu proceso de inscripción?`;
+      message =`¿Te puedo apoyar en tu proceso de inscripción?`;
       break;
     default:
       message = "Hola, te compartimos información de la carrera.";
