@@ -10,8 +10,7 @@ const CienciasSociales = [
     { name: "Relaciones Internacionales", url: "LXO/CienciasSociales/relaciones-internacionales.html" },
     { name: "Licenciatura Ejecutiva en Relaciones Públicas", url: "LXO/CienciasSociales/relaciones-publicas.html" },
     { name: "Seguridad Pública", url: "LXO/CienciasSociales/seguridad-publica.html" },
-    { name: "Sociología", url: "LXO/CienciasSociales/sociologia.html" },
-    { name: "Maestría en Gestión de Instituciones y Centros Hospitalarios (En línea)", url: "PGO/CienciasSalud/maestria-gestion-instituciones-centros-hospitalarios.html" }
+    { name: "Sociología", url: "LXO/CienciasSociales/sociologia.html" }
 ];
 
 const DisenoArteArquitectura = [
@@ -56,13 +55,20 @@ const Negocios = [
     { name: "Mercadotecnia y Publicidad en Entornos Digitales", url: "LXO/Negocios/mercadotecnia-digital.html" }
 ];
 
+const Maestrias = [
+    { name: "Maestría en Gestión de Instituciones y Centros Hospitalarios", url: "PGO/CienciasSalud/maestria-gestion-instituciones-centros-hospitalarios.html" },
+    { name: "Maestría en Arquitectura con Orientación en Diseño Sustentable", url: "PGO/DisenoArteArquitectura/maestria-arq-orientacion-diseno-sustentable.html" },
+    { name: "Maestría en Diseño Multimedia con orientación en Aplicaciones Web y Móviles", url: "PGO/DisenoArteArquitectura/maestria-diseno-multimedia-aplicaciones-web-moviles.html" }
+
+]
 
 const allPrograms = [
     ...CienciasSociales,
     ...DisenoArteArquitectura,
     ...HospitalidadTurismoGastronomia,
     ...Ingenierias,
-    ...Negocios
+    ...Negocios,
+    ...Maestrias
 ];
 
 const fuse = new Fuse(allPrograms, {
