@@ -69,7 +69,7 @@ function sendWhatsApp(pdfUrl, carreraNombre) {
   switch (window.selectedMessageType) {
     case 1:
       message = `Hola ${name}, soy el Lic. Axel Gutiérrez del Departamento de Becas y Admisiones de UVM.\n\n` +
-        `Te comparto los detalles de la carrera "${carreraNombre}":\n\n` +
+        `Te comparto los detalles de la "${carreraNombre}":\n\n` +
         `- Modalidad: 100% en línea.\n` +
         `- Duración: ${duracion}\n\n` +
         `- Plataforma de Aprendizaje:\n` +

@@ -10,7 +10,8 @@ const CienciasSociales = [
     { name: "Relaciones Internacionales", url: "LXO/CienciasSociales/relaciones-internacionales.html" },
     { name: "Licenciatura Ejecutiva en Relaciones Públicas", url: "LXO/CienciasSociales/relaciones-publicas.html" },
     { name: "Seguridad Pública", url: "LXO/CienciasSociales/seguridad-publica.html" },
-    { name: "Sociología", url: "LXO/CienciasSociales/sociologia.html" }
+    { name: "Sociología", url: "LXO/CienciasSociales/sociologia.html" },
+    { name: "Maestría en Gestión de Instituciones y Centros Hospitalarios (En línea)", url: "PGO/CienciasSalud/maestria-gestion-instituciones-centros-hospitalarios.html" }
 ];
 
 const DisenoArteArquitectura = [
