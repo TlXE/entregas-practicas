@@ -1,6 +1,3 @@
-<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
-
 function loadWhatsAppWidget(pdfUrl) {
   const h1 = document.querySelector("h1");
   const carreraNombre = h1 ? h1.textContent.replace(/^🏛️\s*/, "").trim() : "Carrera";
@@ -74,6 +71,7 @@ function sendWhatsApp(pdfUrl, carreraNombre) {
       const user = firebase.auth().currentUser;
       const asesor = user && user.displayName ? user.displayName : "el equipo de Admisiones UVM";
       message = `Hola ${name}, soy ${asesor} del Departamento de Becas y Admisiones de UVM.\n\n` +
+
         `Te comparto los detalles de la carrera "${carreraNombre}":\n\n` +
         `- Modalidad: 100% en línea.\n` +
         `- Duración: ${duracion}\n\n` +
