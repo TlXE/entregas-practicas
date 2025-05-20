@@ -68,12 +68,37 @@ const Maestrias = [
     { name: "Maestría en Ingeniería con Orientación en Gestión de Proyectos", url: "PGO/IngenieriasPgo/maestria-ing-orientacion-gestion-proyectos.html" },
     { name: "Maestría en Ingeniería con Orientación en Gestión de Tecnologías de Información", url: "PGO/IngenieriasPgo/maestria-gestion-tecnologias-informacion.html" },
     { name: "Maestría en Ingeniería con Orientación en Inteligencia Artificial", url: "PGO/IngenieriasPgo/maestria-ing-inteligencia-artificial.html" },
-    { name: "Maestría en Ingeniería con Orientación en Inteligencia Artificial", url: "PGO/IngenieriasPgo/maestria-ing-inteligencia-artificial.html" }
+    { name: "Maestría en Administración de Negocios con Orientación en Comercio Internacional", url: "PGO/NegociosPgo/maestria-man-orientacion-comercio-internacional.html" },
+    { name: "Maestría en Administración de Negocios con Orientación en Desarrollo Organizacional", url: "PGO/NegociosPgo/maestria-man-orientacion-desarrollo-organizacional.html" },
+    { name: "Maestría en Administración de Negocios con Orientación en Desarrollo Sostenible", url: "PGO/NegociosPgo/maestria-man-orientacion-desarrollo-sostenible.html" },
+    { name: "Maestría en Administración de Negocios con Orientación en Dirección de Empresas", url: "PGO/NegociosPgo/maestria-admon-negocios-orientacion-direccion-de-empresas.html" },
+    { name: "Maestría en Administración de Negocios con Orientación en Dirección en Ventas", url: "PGO/NegociosPgo/maestria-admon-negocios-orientacion-ventas.html" },
+    { name: "Maestria en Administración en Negocios con Orientación en Finanzas", url: "PGO/NegociosPgo/maestria-man-orientacion-finanzas.html" },
+    { name: "Maestría en Administración de Negocios con orientación en Gestión Estratégica del Capital Humano", url: "PGO/NegociosPgo/maestria-man-orientacion-gestion-estrategica-capital-humano.html" },
+    { name: "Maestría en Administración de Negocios con Orientación en Logística", url: "PGO/NegociosPgo/maestria-man-orientacion-logistica.html" },
+    { name: "Maestría en Administración de Negocios con Orientación en Mercadotecnia", url: "PGO/NegociosPgo/maestria-admon-negocios-mercadotecnia.html" },
+    { name: "Maestría en Administración de Negocios", url: "PGO/NegociosPgo/maestria-administracion-negocios.html" },
+    { name: "Maestría en Administración Pública", url: "PGO/Sociales/maestria-administracion-publica.html" },
+    { name: "Maestría en Comunicación con Orientación en Publicidad y Medios Digitales", url: "PGO/Sociales/maestria-comunicacion-orientacion-publicidad-medios-digitales.html" },
+    { name: "Maestría en Comunicación", url: "PGO/Sociales/maestria-comunicacion.html" },
+    { name: "Maestría en Derecho con Orientación en Derecho Corporativo", url: "PGO/Sociales/maestria-derecho-orientacion-derecho-corporativo.html" },
+    { name: "Maestría en Derecho con Orientación en Derecho Civil y Familiar con Litigación Oral", url: "PGO/Sociales/maestria-derecho-orientacion-derecho-civil-litigacion-oral.html" },
+    { name: "Maestría en Derecho con Orientación en Derecho Constitucional, Derechos Humanos y Amparo", url: "PGO/Sociales/maestria-derecho.html" },
+    { name: "Maestría en Derecho", url: "PGO/Sociales/maestria-derecho.html" },
+    { name: "Maestría en Derecho Fiscal", url: "PGO/Sociales/maestria-derecho-fiscal.html" },
+    { name: "Maestría en Educación Basada en Competencias", url: "PGO/Sociales/maestria-educacion-basada-en-competencias.html" },
+    { name: "Maestría en Educación con Orientación en Dirección y Gestión de Instituciones", url: "PGO/Sociales/maestria-educacion-orientacion-direccion-gestion.html" },
+    { name: "Maestría en Educación con Orientación en Innovación y Tecnología", url: "PGO/Sociales/maestria-educacion-orientacion-innovacion-tecnologia.html" },
+    { name: "Maestría en Educación con Orientación en Tutoría", url: "PGO/Sociales/maestria-educacion-orientacion-tutoria.html" },
 ]
 
 const Especialidades = [
     { name: "Especialidad en Valuación Inmobiliaria en Línea", url: "PGO/DisenoArteArquitectura/especialidad-valuacion-inmobiliaria.html" },
     { name: "Especialidad en Seguridad e Higiene Industrial", url: "PGO/IngenieriasPgo/especialidad-seguridad-higiene-industrial.html" },
+    { name: "Especialidad en Finanzas", url: "PGO/NegociosPgo/especialidad-en-finanzas.html" },
+    { name: "Especialidad en Gestión Empresarial", url: "PGO/NegociosPgo/especialidad-gestion-empresarial.html" },
+    { name: "Especialidad en Gestión Estratégica del Capital Humano", url: "PGO/NegociosPgo/especialidad-gestion-estrategica-del-capital-humano.html" },
+    { name: "Especialidad en Logística", url: "PGO/NegociosPgo/especialidad-en-logistica.html" }
 ]
 
 const allPrograms = [
