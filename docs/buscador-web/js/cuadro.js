@@ -114,3 +114,19 @@ function abrirCuadroRojo() {
     window.open("https://outlook.office.com/mail/deeplink/compose", "_blank");
   }
   
+  
+  function autocompletarDesdeTexto() {
+    const texto = document.getElementById("entradaRapida").value;
+
+    // Separar por |
+    const partes = texto.split("|").map(p => p.trim());
+
+    // Asignar a los campos si existen suficientes partes
+    if (partes.length >= 3) {
+      document.getElementById("crNombre").value = partes[0];
+      document.getElementById("crNumPersona").value = partes[1];
+      document.getElementById("crCorreo").value = partes[2];
+    } else {
+      alert("Formato incorrecto. Usa: Nombre | Número | Correo");
+    }
+  }
