@@ -113,7 +113,8 @@ const allPrograms = [
 
 const fuse = new Fuse(allPrograms, {
     keys: ['name'],
-    threshold: 0.3
+    threshold: 0.3,
+    ignoreLocations: true,
 });
 
 document.getElementById("searchBox").addEventListener("input", function() {
