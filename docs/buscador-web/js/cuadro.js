@@ -120,38 +120,48 @@
   }
   
   
-  function autocompletarDesdeTexto() {
-  const texto = document.getElementById("entradaRapida").value;
+    function autocompletarDesdeTexto() {
+    const texto = document.getElementById("entradaRapida").value;
+    const lineas = texto.split("\n").map(l => l.trim()).filter(l => l.length > 0);
 
-  // Buscar número de persona (solo dígitos, 8 cifras)
-  const numeroPersona = texto.match(/\b\d{8}\b/);
-  if (numeroPersona) {
-    document.getElementById("crNumPersona").value = numeroPersona[0];
+    // Buscar número de persona (8 dígitos exactos)
+    const numeroPersona = texto.match(/\b\d{8}\b/);
+    if (numeroPersona) {
+      document.getElementById("crNumPersona").value = numeroPersona[0];
+    }
+
+    // Buscar teléfono (10 dígitos)
+    const telefono = texto.match(/\b\d{10}\b/);
+    if (telefono) {
+      document.getElementById("crTelefono").value = telefono[0];
+    }
+
+    // Buscar correo electrónico
+    const correo = texto.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+    if (correo) {
+      document.getElementById("crCorreo").value = correo[0];
+    }
+
+    // Buscar promedio (entre 0 y 10)
+    const promedio = texto.match(/\b(?:10(?:\.0+)?|[0-9](?:\.[0-9]+)?)\b/);
+    if (promedio) {
+      document.getElementById("crPromedio").value = promedio[0];
+    }
+
+    // Buscar liga (URL de PureCloud)
+    const liga = texto.match(/https?:\/\/[^\s]+mypurecloud\.com[^\s]*/i);
+    if (liga) {
+      document.getElementById("crLiga").value = liga[0];
+    }
+
+    // Buscar nombre de persona: línea sin números ni @ ni .com
+    for (let linea of lineas) {
+      if (/^[A-ZÁÉÍÓÚÑ ]+$/i.test(linea) && !linea.toLowerCase().includes("asesor")) {
+        document.getElementById("crNombre").value = linea;
+        break;
+      }
+    }
   }
 
-  // Buscar teléfono (10 dígitos, puede iniciar en 2, 5, 6, 7, etc.)
-  const telefono = texto.match(/\b\d{10}\b/);
-  if (telefono) {
-    document.getElementById("crTelefono").value = telefono[0];
-  }
-
-  // Buscar correo electrónico
-  const correo = texto.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
-  if (correo) {
-    document.getElementById("crCorreo").value = correo[0];
-  }
-
-  // Buscar promedio (1.0 a 10, incluyendo decimales)
-  const promedio = texto.match(/\b(?:10(?:\.0+)?|[0-9](?:\.[0-9]+)?)\b/);
-  if (promedio) {
-    document.getElementById("crPromedio").value = promedio[0];
-  }
-
-  // Buscar liga de llamada (URL de PureCloud)
-  const liga = texto.match(/https?:\/\/[^\s]+mypurecloud\.com[^\s]*/i);
-  if (liga) {
-    document.getElementById("crLiga").value = liga[0];
-  }
-}
 
 
