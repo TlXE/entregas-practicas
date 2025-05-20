@@ -66,6 +66,9 @@ const Maestrias = [
     { name: "Maestría en Ingeniería con Orientación en Energías Renovables", url: "PGO/IngenieriasPgo/maestria-ing-orientacion-energias-renovables.html" },
     { name: "Maestría en Ingeniería con Orientación en Gestión de calidad", url: "PGO/IngenieriasPgo/maestria-ing-orientacion-gestion-calidad.html" },
     { name: "Maestría en Ingeniería con Orientación en Gestión de Proyectos", url: "PGO/IngenieriasPgo/maestria-ing-orientacion-gestion-proyectos.html" },
+    { name: "Maestría en Ingeniería con Orientación en Gestión de Tecnologías de Información", url: "PGO/IngenieriasPgo/maestria-gestion-tecnologias-informacion.html" },
+    { name: "Maestría en Ingeniería con Orientación en Inteligencia Artificial", url: "PGO/IngenieriasPgo/maestria-ing-inteligencia-artificial.html" },
+    { name: "Maestría en Ingeniería con Orientación en Inteligencia Artificial", url: "PGO/IngenieriasPgo/maestria-ing-inteligencia-artificial.html" }
 ]
 
 const Especialidades = [
