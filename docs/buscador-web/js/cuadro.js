@@ -121,17 +121,32 @@
   
   
   function autocompletarDesdeTexto() {
-    const texto = document.getElementById("entradaRapida").value;
+  const texto = document.getElementById("entradaRapida").value.trim();
+  const lineas = texto.split("\n").map(linea => linea.trim()).filter(Boolean);
 
-    // Separar por |
-    const partes = texto.split("|").map(p => p.trim());
+  const idsCampos = [
+    "crFecha",         // 0
+    "crCE",            // 1
+    "crNumPersona",    // 2
+    "crNombre",        // 3
+    "crTelefono",      // 4
+    "crCorreo",        // 5
+    "crLinea",         // 6
+    "crCarrera",       // 7
+    "crPromedio",      // 8
+    "crFuente",        // 9
+    "crCiclo",         // 10
+    "crAsesorDestino", // 11
+    "crHora",          // 12
+    "crLiga",          // 13
+    "crEstatus"        // 14
+  ];
 
-    // Asignar a los campos si existen suficientes partes
-    if (partes.length >= 3) {
-      document.getElementById("crNombre").value = partes[0];
-      document.getElementById("crNumPersona").value = partes[1];
-      document.getElementById("crCorreo").value = partes[2];
-    } else {
-      alert("Formato incorrecto. Usa: Nombre | Número | Correo");
+  // Llenar solo los campos disponibles según la cantidad de líneas pegadas
+  for (let i = 0; i < lineas.length && i < idsCampos.length; i++) {
+    const campo = document.getElementById(idsCampos[i]);
+    if (campo) {
+      campo.value = lineas[i];
     }
   }
+}
