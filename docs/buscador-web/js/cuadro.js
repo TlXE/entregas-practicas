@@ -121,32 +121,37 @@
   
   
   function autocompletarDesdeTexto() {
-  const texto = document.getElementById("entradaRapida").value.trim();
-  const lineas = texto.split("\n").map(linea => linea.trim()).filter(Boolean);
+    const texto = document.getElementById("entradaRapida").value.trim();
+    const lineas = texto.split(/\r?\n/).map(linea => linea.trim());
 
-  const idsCampos = [
-    "crFecha",         // 0
-    "crCE",            // 1
-    "crNumPersona",    // 2
-    "crNombre",        // 3
-    "crTelefono",      // 4
-    "crCorreo",        // 5
-    "crLinea",         // 6
-    "crCarrera",       // 7
-    "crPromedio",      // 8
-    "crFuente",        // 9
-    "crCiclo",         // 10
-    "crAsesorDestino", // 11
-    "crHora",          // 12
-    "crLiga",          // 13
-    "crEstatus"        // 14
-  ];
+    // Mapeamos por orden de aparición
+    const campos = [
+      "crFecha",          // 0
+      "crCE",             // 1
+      "crNumPersona",     // 2
+      "crNombre",         // 3
+      "crTelefono",       // 4
+      "crCorreo",         // 5
+      "crLinea",          // 6
+      "crCarrera",        // 7
+      "crPromedio",       // 8
+      "crFuente",         // 9
+      "crCiclo",          //10
+      "crAsesorDestino",  //11
+      "crHora",           //12
+      "crLiga",           //13
+      "crEstatus"         //14
+    ];
 
-  // Llenar solo los campos disponibles según la cantidad de líneas pegadas
-  for (let i = 0; i < lineas.length && i < idsCampos.length; i++) {
-    const campo = document.getElementById(idsCampos[i]);
-    if (campo) {
-      campo.value = lineas[i];
+    // Rellenamos los campos si hay datos suficientes
+    for (let i = 0; i < campos.length; i++) {
+      if (lineas[i]) {
+        const campo = document.getElementById(campos[i]);
+        if (campo) campo.value = lineas[i];
+      }
     }
+
+    // Refresca la vista previa en tiempo real
+    actualizarVistaPrevia();
   }
-}
+

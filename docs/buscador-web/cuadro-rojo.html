@@ -16,8 +16,12 @@
 
   <div style="margin: 20px auto; width: 90%; text-align: left;">
     <h3>📋 Pegado rápido de datos</h3>
-    <input id="entradaRapida" placeholder="Ej: Juan Pérez | 123456 | juan@example.com" style="width: 100%; padding: 10px; font-size: 16px;">
-    <button onclick="autocompletarDesdeTexto()" style="margin-top: 10px; padding: 10px;">Autocompletar</button>
+    <label for="entradaRapida"><strong>Entrada rápida:</strong></label><br>
+    <textarea id="entradaRapida" 
+          oninput="autocompletarDesdeTexto()" 
+          placeholder="Pega los datos aquí, cada dato en una línea."
+          rows="8" 
+          style="width: 100%; margin-bottom: 10px;"></textarea>
   </div>
 
   <div id="cuadroRojoModal" style="margin-top: 20px;">
