@@ -1,3 +1,5 @@
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+
 function loadWhatsAppWidget(pdfUrl) {
   const h1 = document.querySelector("h1");
   const carreraNombre = h1 ? h1.textContent.replace(/^🏛️\s*/, "").trim() : "Carrera";
@@ -68,7 +70,8 @@ function sendWhatsApp(pdfUrl, carreraNombre) {
 
   switch (window.selectedMessageType) {
     case 1:
-      message = `Hola ${name}, soy el Lic. Axel Gutiérrez del Departamento de Becas y Admisiones de UVM.\n\n` +
+      const asesor = getAuth().currentUser?.displayName || "el equipo de Admisiones UVM";
+      message = `Hola ${name}, soy ${asesor} del Departamento de Becas y Admisiones de UVM.\n\n` +
         `Te comparto los detalles de la "${carreraNombre}":\n\n` +
         `- Modalidad: 100% en línea.\n` +
         `- Duración: ${duracion}\n\n` +
