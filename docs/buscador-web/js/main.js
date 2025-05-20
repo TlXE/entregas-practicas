@@ -58,8 +58,17 @@ const Negocios = [
 const Maestrias = [
     { name: "Maestría en Gestión de Instituciones y Centros Hospitalarios", url: "PGO/CienciasSalud/maestria-gestion-instituciones-centros-hospitalarios.html" },
     { name: "Maestría en Arquitectura con Orientación en Diseño Sustentable", url: "PGO/DisenoArteArquitectura/maestria-arq-orientacion-diseno-sustentable.html" },
-    { name: "Maestría en Diseño Multimedia con orientación en Aplicaciones Web y Móviles", url: "PGO/DisenoArteArquitectura/maestria-diseno-multimedia-aplicaciones-web-moviles.html" }
+    { name: "Maestría en Diseño Multimedia con orientación en Aplicaciones Web y Móviles", url: "PGO/DisenoArteArquitectura/maestria-diseno-multimedia-aplicaciones-web-moviles.html" },
+    { name: "Maestría en Diseño Multimedia con Orientación en Producción Fotográfica", url: "PGO/DisenoArteArquitectura/maestria-diseno-multimedia-orientacion-produccion-fotografica.html" },
+    { name: "Maestría en Gastronomía", url: "PGO/HospitalidadTurismoGastronomia/maestria-gastronomia.html" },
+    { name: "Maestría en Administración de Negocios con Orientación en Dirección y Gestión Hotelera", url: "PGO/HospitalidadTurismoGastronomia/maestria-man-orientacion-direccion-gestion-hotelera.html" },
+    { name: "Maestría en Gastronomía", url: "PGO/HospitalidadTurismoGastronomia/maestria-gastronomia.html" },
 
+]
+
+const Especialidades = [
+    { name: "Especialidad en Valuación Inmobiliaria en Línea", url: "PGO/DisenoArteArquitectura/especialidad-valuacion-inmobiliaria.html" },
+    { name: "Especialidad en Seguridad e Higiene Industrial", url: "PGO/IngenieriasPgo/especialidad-seguridad-higiene-industrial.html" },
 ]
 
 const allPrograms = [
@@ -68,7 +77,8 @@ const allPrograms = [
     ...HospitalidadTurismoGastronomia,
     ...Ingenierias,
     ...Negocios,
-    ...Maestrias
+    ...Maestrias,
+    ...Especialidades
 ];
 
 const fuse = new Fuse(allPrograms, {
