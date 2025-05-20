@@ -121,37 +121,37 @@
   
   
   function autocompletarDesdeTexto() {
-    const texto = document.getElementById("entradaRapida").value.trim();
-    const lineas = texto.split(/\r?\n/).map(linea => linea.trim());
+  const texto = document.getElementById("entradaRapida").value;
 
-    // Mapeamos por orden de aparición
-    const campos = [
-      "crFecha",          // 0
-      "crCE",             // 1
-      "crNumPersona",     // 2
-      "crNombre",         // 3
-      "crTelefono",       // 4
-      "crCorreo",         // 5
-      "crLinea",          // 6
-      "crCarrera",        // 7
-      "crPromedio",       // 8
-      "crFuente",         // 9
-      "crCiclo",          //10
-      "crAsesorDestino",  //11
-      "crHora",           //12
-      "crLiga",           //13
-      "crEstatus"         //14
-    ];
-
-    // Rellenamos los campos si hay datos suficientes
-    for (let i = 0; i < campos.length; i++) {
-      if (lineas[i]) {
-        const campo = document.getElementById(campos[i]);
-        if (campo) campo.value = lineas[i];
-      }
-    }
-
-    // Refresca la vista previa en tiempo real
-    actualizarVistaPrevia();
+  // Buscar número de persona (solo dígitos, 8 cifras)
+  const numeroPersona = texto.match(/\b\d{8}\b/);
+  if (numeroPersona) {
+    document.getElementById("crNumPersona").value = numeroPersona[0];
   }
+
+  // Buscar teléfono (10 dígitos, puede iniciar en 2, 5, 6, 7, etc.)
+  const telefono = texto.match(/\b\d{10}\b/);
+  if (telefono) {
+    document.getElementById("crTelefono").value = telefono[0];
+  }
+
+  // Buscar correo electrónico
+  const correo = texto.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+  if (correo) {
+    document.getElementById("crCorreo").value = correo[0];
+  }
+
+  // Buscar promedio (1.0 a 10, incluyendo decimales)
+  const promedio = texto.match(/\b(?:10(?:\.0+)?|[0-9](?:\.[0-9]+)?)\b/);
+  if (promedio) {
+    document.getElementById("crPromedio").value = promedio[0];
+  }
+
+  // Buscar liga de llamada (URL de PureCloud)
+  const liga = texto.match(/https?:\/\/[^\s]+mypurecloud\.com[^\s]*/i);
+  if (liga) {
+    document.getElementById("crLiga").value = liga[0];
+  }
+}
+
 
