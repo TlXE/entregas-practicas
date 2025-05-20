@@ -62,8 +62,10 @@ const Maestrias = [
     { name: "Maestría en Diseño Multimedia con Orientación en Producción Fotográfica", url: "PGO/DisenoArteArquitectura/maestria-diseno-multimedia-orientacion-produccion-fotografica.html" },
     { name: "Maestría en Gastronomía", url: "PGO/HospitalidadTurismoGastronomia/maestria-gastronomia.html" },
     { name: "Maestría en Administración de Negocios con Orientación en Dirección y Gestión Hotelera", url: "PGO/HospitalidadTurismoGastronomia/maestria-man-orientacion-direccion-gestion-hotelera.html" },
-    { name: "Maestría en Gastronomía", url: "PGO/HospitalidadTurismoGastronomia/maestria-gastronomia.html" },
-
+    { name: "Maestría en Ingeniería con Orientación en Ciencia de Datos", url: "PGO/IngenieriasPgo/maestria-ing-orientacion-ciencia-datos.html" },
+    { name: "Maestría en Ingeniería con Orientación en Energías Renovables", url: "PGO/IngenieriasPgo/maestria-ing-orientacion-energias-renovables.html" },
+    { name: "Maestría en Ingeniería con Orientación en Gestión de calidad", url: "PGO/IngenieriasPgo/maestria-ing-orientacion-gestion-calidad.html" },
+    { name: "Maestría en Ingeniería con Orientación en Gestión de Proyectos", url: "PGO/IngenieriasPgo/maestria-ing-orientacion-gestion-proyectos.html" },
 ]
 
 const Especialidades = [
