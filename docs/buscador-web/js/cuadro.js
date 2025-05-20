@@ -1,13 +1,18 @@
-function abrirCuadroRojo() {
+  function abrirCuadroRojo() {
     const ahora = new Date();
     const fecha = ahora.toLocaleDateString('es-MX');
     const hora = ahora.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' });
-  
+
     document.getElementById("crFecha").value = fecha;
     document.getElementById("crHora").value = hora;
     document.getElementById("cuadroRojoModal").style.display = "block";
-  
-    // Activar actualización en tiempo real
+
+    // Autocompletar automáticamente si hay texto en entrada rápida
+    const texto = document.getElementById("entradaRapida").value;
+    if (texto.trim() !== "") {
+      autocompletarDesdeTexto();
+    }
+
     activarVistaPreviaTiempoReal();
   }
   
